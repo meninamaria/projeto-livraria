@@ -51,6 +51,7 @@ def funcao_principal():
 
 
 def listar_livros():
+    formulario.close()
     acervo.show()
 
     cursor = banco.cursor()
@@ -64,6 +65,9 @@ def listar_livros():
     for i in range(0, len(dados_lidos)):
         for j in range(0, 5):
             acervo.tabela_livros.setItem(i, j, QtWidgets.QTableWidgetItem(str(dados_lidos[i][j])))
+
+    acervo.bt_voltar.clicked.connect(lambda: [acervo.close(), formulario.show()])
+
 
 
 # executar o sistema

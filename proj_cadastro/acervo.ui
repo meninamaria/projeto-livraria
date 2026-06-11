@@ -22,7 +22,7 @@
      <rect>
       <x>0</x>
       <y>30</y>
-      <width>691</width>
+      <width>721</width>
       <height>41</height>
      </rect>
     </property>
@@ -40,10 +40,10 @@
      <string>Acervo </string>
     </property>
     <property name="textFormat">
-     <enum>AutoText</enum>
+     <enum>Qt::TextFormat::AutoText</enum>
     </property>
     <property name="alignment">
-     <set>AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QTableWidget" name="tabela_livros">
@@ -57,6 +57,47 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <column>
+     <property name="text">
+      <string>New Column</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Autor</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Preço</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Categoria</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="bt_voltar">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>570</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(201, 233, 255);</string>
+    </property>
+    <property name="text">
+     <string>Voltar</string>
     </property>
    </widget>
   </widget>
