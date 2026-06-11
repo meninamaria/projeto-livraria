@@ -35,6 +35,19 @@ def funcao_principal():
     cursor.execute(comando_SQL, dados)
     banco.commit()
 
+    # Limpar os campos
+    formulario.txt_nome.setText("")
+    formulario.txt_autor.setText("")
+    formulario.txt_preco.setText("")
+
+    # Desmarcar os botões
+    formulario.bt_categ_romance.setCheckable(False)
+    formulario.bt_categ_terror.setCheckable(False)
+    formulario.bt_categ_misterio.setCheckable(False)
+    formulario.bt_categ_infantil.setCheckable(False)
+    formulario.bt_categ_fantasia.setCheckable(False)
+    formulario.bt_categ_biografia.setCheckable(False)
+
 
 
 # executar o sistema
