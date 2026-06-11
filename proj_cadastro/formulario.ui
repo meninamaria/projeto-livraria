@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>390</width>
-    <height>600</height>
+    <height>662</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@ background-color: rgb(201, 233, 255);</string>
       <x>10</x>
       <y>30</y>
       <width>371</width>
-      <height>20</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -41,17 +41,17 @@ background-color: rgb(201, 233, 255);</string>
      <string>Cadastro de Livros</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::TextFormat::AutoText</enum>
+     <enum>AutoText</enum>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <set>AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="titulo_Nome_do_Livro">
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>170</y>
+      <y>100</y>
       <width>260</width>
       <height>16</height>
      </rect>
@@ -59,7 +59,7 @@ background-color: rgb(201, 233, 255);</string>
     <property name="font">
      <font>
       <family>Sitka Banner Semibold</family>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -71,7 +71,7 @@ background-color: rgb(201, 233, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>190</y>
+      <y>130</y>
       <width>261</width>
       <height>31</height>
      </rect>
@@ -91,7 +91,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>250</y>
+      <y>190</y>
       <width>260</width>
       <height>16</height>
      </rect>
@@ -99,7 +99,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="font">
      <font>
       <family>Sitka Banner Semibold</family>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -111,7 +111,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>270</y>
+      <y>230</y>
       <width>261</width>
       <height>31</height>
      </rect>
@@ -131,7 +131,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>330</y>
+      <y>280</y>
       <width>260</width>
       <height>16</height>
      </rect>
@@ -139,7 +139,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="font">
      <font>
       <family>Sitka Banner Semibold</family>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -151,47 +151,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>350</y>
-      <width>261</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Yu Gothic UI Light</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-background-color: rgb(255, 255, 255);</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="titulo_Cod_do_Livro">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>90</y>
-      <width>260</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Sitka Banner Semibold</family>
-      <pointsize>16</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Código</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txt_codigo">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>110</y>
+      <y>320</y>
       <width>261</width>
       <height>31</height>
      </rect>
@@ -211,7 +171,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>400</y>
+      <y>380</y>
       <width>260</width>
       <height>31</height>
      </rect>
@@ -231,7 +191,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>440</y>
+      <y>430</y>
       <width>98</width>
       <height>24</height>
      </rect>
@@ -244,7 +204,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>470</y>
+      <y>460</y>
       <width>98</width>
       <height>24</height>
      </rect>
@@ -257,7 +217,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>500</y>
+      <y>490</y>
       <width>98</width>
       <height>24</height>
      </rect>
@@ -270,7 +230,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>440</y>
+      <y>430</y>
       <width>98</width>
       <height>24</height>
      </rect>
@@ -283,7 +243,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>470</y>
+      <y>460</y>
       <width>98</width>
       <height>24</height>
      </rect>
@@ -296,7 +256,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>500</y>
+      <y>490</y>
       <width>98</width>
       <height>24</height>
      </rect>
@@ -309,7 +269,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>540</y>
+      <y>560</y>
       <width>101</width>
       <height>41</height>
      </rect>
