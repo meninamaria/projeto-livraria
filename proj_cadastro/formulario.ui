@@ -268,7 +268,7 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="bt_cadastrar">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>210</x>
       <y>560</y>
       <width>101</width>
       <height>41</height>
@@ -280,6 +280,22 @@ background-color: rgb(206, 255, 185);</string>
     </property>
     <property name="text">
      <string>Cadastrar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_listarLivros">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>560</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(230, 213, 255);</string>
+    </property>
+    <property name="text">
+     <string>Listar</string>
     </property>
    </widget>
   </widget>

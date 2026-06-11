@@ -29,9 +29,10 @@ def funcao_principal():
     else:
         categoria = "Biografia"
 
+    # Inserir os dados no BD
     cursor = banco.cursor()
     comando_SQL = "INSERT INTO livros (nome, autor, preco, categoria) VALUES (%s, %s, %s, %s)"
-    dados = (str(nome), str(autor), float(preco), categoria)
+    dados = (str(nome), str(autor), str(preco), categoria)
     cursor.execute(comando_SQL, dados)
     banco.commit()
 
@@ -49,12 +50,32 @@ def funcao_principal():
     formulario.bt_categ_biografia.setCheckable(False)
 
 
+def listar_livros():
+    acervo.show()
+
+    cursor = banco.cursor()
+    comando_SQL = "SELECT * from livros"
+    cursor.execute(comando_SQL)
+    dados_lidos = cursor.fetchall()
+
+    acervo.tabela_livros.setRowCount(len(dados_lidos))
+    acervo.tabela_livros.setColumnCount(5)
+
+    for i in range(0, len(dados_lidos)):
+        for j in range(0, 5):
+            acervo.tabela_livros.setItem(i, j, QtWidgets.QTableWidgetItem(str(dados_lidos[i][j])))
+
 
 # executar o sistema
 app = QtWidgets.QApplication([])
-ui_path = Path(__file__).with_name("formulario.ui")
-formulario = uic.loadUi(str(ui_path))
+
+ui_path1 = Path(__file__).with_name("formulario.ui")
+formulario = uic.loadUi(str(ui_path1))
 formulario.bt_cadastrar.clicked.connect(funcao_principal)
+
+ui_path2 = Path(__file__).with_name("acervo.ui")
+acervo = uic.loadUi(str(ui_path2))
+formulario.bt_listarLivros.clicked.connect(listar_livros)
 
 formulario.show()
 app.exec()
