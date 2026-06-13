@@ -103,7 +103,7 @@ background-color: rgb(255, 255, 255);</string>
      </font>
     </property>
     <property name="text">
-     <string>(informe o ID ou Nome)</string>
+     <string>(informe o ID)</string>
     </property>
    </widget>
    <widget class="QTableWidget" name="tabela_livro_excluir">
@@ -112,7 +112,7 @@ background-color: rgb(255, 255, 255);</string>
       <x>40</x>
       <y>190</y>
       <width>661</width>
-      <height>111</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -181,7 +181,7 @@ background-color: rgb(246, 255, 185);</string>
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>320</y>
+      <y>300</y>
       <width>101</width>
       <height>41</height>
      </rect>

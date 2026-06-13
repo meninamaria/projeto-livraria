@@ -69,18 +69,36 @@ def listar_livros():
     acervo.bt_voltar.clicked.connect(lambda: [acervo.close(), formulario.show()])
 
 def deletar_livros():
-    formulario.close()
+    acervo.close()
     deletar_livro.show()
 
-    deletar_livro.bt_voltar.clicked.connect(lambda: [acervo.close(), formulario.show()])
+    # Botão voltar 
+    deletar_livro.bt_voltar.clicked.connect(lambda: [deletar_livro.close(), acervo.show()])
 
-    busca = deletar_livro.txt_busca.text()
-    deletar_livro.bt_buscar.clicked.connect(lambda: buscar(busca))
+    # Botão buscar
+    deletar_livro.bt_buscar.clicked.connect(buscar)
+
+    # Deletar o livro
+    deletar_livro.bt_deletar.clicked.connect(deletar)
+
+def deletar():
+    if buscar() == 1:
+        busca = deletar_livro.txt_busca.text()
+
+        cursor = banco.cursor()
+        comando_SQL = "DELETE from livros where codigo = %s"
+        dado = (str(busca),)
+        cursor.execute(comando_SQL, dado)
+        banco.commit()
+        deletar_livro.txt_busca.setText("")
+        deletar_livro.tabela_livro_excluir.setRowCount(0)
+
         
-def buscar(busca):
+def buscar():
+    busca = deletar_livro.txt_busca.text()
     cursor = banco.cursor()
-    comando_SQL = "SELECT * from livros WHERE codigo = %s OR nome = %s"
-    dado = (busca, str(busca))
+    comando_SQL = "SELECT * from livros WHERE codigo = %s"
+    dado = (str(busca),)
     cursor.execute(comando_SQL, dado)
     dados_lidos = cursor.fetchall()
 
@@ -90,6 +108,11 @@ def buscar(busca):
     for i in range(0, len(dados_lidos)):
         for j in range(0, 5):
             deletar_livro.tabela_livro_excluir.setItem(i, j, QtWidgets.QTableWidgetItem(str(dados_lidos[i][j])))
+    
+    if len(dados_lidos) < 0:
+        return 0
+    else:
+        return 1
 
 
 # executar o sistema
