@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>listar_livros</class>
- <widget class="QMainWindow" name="listar_livros">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>731</width>
-    <height>662</height>
+    <width>733</width>
+    <height>496</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(230, 213, 255);</string>
+   <string notr="true">background-color: rgb(255, 193, 196);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="titulo_Cadastro_de_Livros">
+   <widget class="QLabel" name="titulo_Excluir_livro">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>30</y>
-      <width>721</width>
+      <width>711</width>
       <height>41</height>
      </rect>
     </property>
@@ -37,7 +37,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Cadastro de Produtos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
-     <string>Acervo </string>
+     <string>Excluir Livro</string>
     </property>
     <property name="textFormat">
      <enum>AutoText</enum>
@@ -46,13 +46,73 @@
      <set>AlignCenter</set>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tabela_livros">
+   <widget class="QLineEdit" name="txt_busca">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>140</x>
+      <y>130</y>
+      <width>401</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Yu Gothic UI Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="titulo_Nome_do_Livro">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
       <y>90</y>
-      <width>541</width>
-      <height>441</height>
+      <width>260</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka Banner Semibold</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Busca</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="titulo_Nome_do_Livro_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>90</y>
+      <width>260</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>(informe o ID ou Nome)</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tabela_livro_excluir">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>190</y>
+      <width>661</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -84,11 +144,28 @@
      </property>
     </column>
    </widget>
+   <widget class="QPushButton" name="bt_buscar">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>130</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(246, 255, 185);</string>
+    </property>
+    <property name="text">
+     <string>Procurar</string>
+    </property>
+   </widget>
    <widget class="QPushButton" name="bt_voltar">
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>570</y>
+      <y>390</y>
       <width>101</width>
       <height>41</height>
      </rect>
@@ -100,20 +177,21 @@
      <string>Voltar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_excluir">
+   <widget class="QPushButton" name="bt_deletar">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>570</y>
+      <x>320</x>
+      <y>320</y>
       <width>101</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 193, 196);</string>
+     <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Excluir</string>
+     <string>Deletar</string>
     </property>
    </widget>
   </widget>

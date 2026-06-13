@@ -68,6 +68,28 @@ def listar_livros():
 
     acervo.bt_voltar.clicked.connect(lambda: [acervo.close(), formulario.show()])
 
+def deletar_livros():
+    formulario.close()
+    deletar_livro.show()
+
+    deletar_livro.bt_voltar.clicked.connect(lambda: [acervo.close(), formulario.show()])
+
+    busca = deletar_livro.txt_busca.text()
+    deletar_livro.bt_buscar.clicked.connect(lambda: buscar(busca))
+        
+def buscar(busca):
+    cursor = banco.cursor()
+    comando_SQL = "SELECT * from livros WHERE codigo = %s OR nome = %s"
+    dado = (busca, str(busca))
+    cursor.execute(comando_SQL, dado)
+    dados_lidos = cursor.fetchall()
+
+    deletar_livro.tabela_livro_excluir.setRowCount(len(dados_lidos))
+    deletar_livro.tabela_livro_excluir.setColumnCount(5)
+
+    for i in range(0, len(dados_lidos)):
+        for j in range(0, 5):
+            deletar_livro.tabela_livro_excluir.setItem(i, j, QtWidgets.QTableWidgetItem(str(dados_lidos[i][j])))
 
 
 # executar o sistema
@@ -80,6 +102,10 @@ formulario.bt_cadastrar.clicked.connect(funcao_principal)
 ui_path2 = Path(__file__).with_name("acervo.ui")
 acervo = uic.loadUi(str(ui_path2))
 formulario.bt_listarLivros.clicked.connect(listar_livros)
+
+ui_path3 = Path(__file__).with_name("deletar_livro.ui")
+deletar_livro = uic.loadUi(str(ui_path3))
+acervo.bt_excluir.clicked.connect(deletar_livros)
 
 formulario.show()
 app.exec()
