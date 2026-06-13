@@ -40,10 +40,10 @@
      <string>Acervo </string>
     </property>
     <property name="textFormat">
-     <enum>Qt::TextFormat::AutoText</enum>
+     <enum>AutoText</enum>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <set>AlignCenter</set>
     </property>
    </widget>
    <widget class="QTableWidget" name="tabela_livros">
@@ -60,12 +60,12 @@
     </property>
     <column>
      <property name="text">
-      <string>New Column</string>
+      <string>ID</string>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>ID</string>
+      <string>Nome</string>
      </property>
     </column>
     <column>
