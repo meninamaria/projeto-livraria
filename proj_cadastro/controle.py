@@ -85,6 +85,8 @@ def deletar():
     if buscar() == 1:
         busca = deletar_livro.txt_busca.text()
 
+
+        # COLOCAR A LÓGICA DA ESTRUTURA DE DADOS PARA DELETAR O LIVRO NA ÚLTIMA POSIÇÃO
         cursor = banco.cursor()
         comando_SQL = "DELETE from livros where codigo = %s"
         dado = (str(busca),)
